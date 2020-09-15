@@ -1,0 +1,23 @@
+{
+  "name": "free",
+  "version": "0.0.1",
+  "description": "一个UI框架",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SilverAsh426/freeUI.git"
+  },
+  "keywords": [
+    "vue",
+    "ui"
+  ],
+  "author": "silverash426",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SilverAsh426/freeUI/issues"
+  },
+  "homepage": "https://github.com/SilverAsh426/freeUI#readme"
+}
