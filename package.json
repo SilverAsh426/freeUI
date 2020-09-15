@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/SilverAsh426/freeUI/issues"
   },
-  "homepage": "https://github.com/SilverAsh426/freeUI#readme"
+  "homepage": "https://github.com/SilverAsh426/freeUI#readme",
+  "dependencies": {
+    "vue": "^2.6.12"
+  }
 }
