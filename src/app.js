@@ -18,9 +18,11 @@ new Vue({
 
 //单元测试
 import chai from 'chai'
+import spices from 'chai-spies'
+chai.use(spices)
 const expect = chai.expect
 
-//icon
+//含有icon
 {
   const Constructor = Vue.extend(Button)
   const vm = new Constructor({
@@ -34,7 +36,7 @@ const expect = chai.expect
   vm.$el.remove()
   vm.$destroy()
 }
-//loading
+//loading值
 {
   const Constructor = Vue.extend(Button)
   const vm = new Constructor({
@@ -94,9 +96,9 @@ const expect = chai.expect
     }
   })
   vm.$mount()
-  vm.$on('click', function (){
-    expect(1).to.eq(1)
-  })
+  let spy = chai.spy(function(){})
+  vm.$on('click', spy)
   let button = vm.$el
   button.click()
+  expect(spy).to.have.been.called()
 }
