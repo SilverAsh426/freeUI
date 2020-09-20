@@ -12,6 +12,7 @@
 <script lang="ts">
 import Icon from './icon'
 export default {
+  name: 'FreeButton',
   components:{
     'g-icon': Icon
   },

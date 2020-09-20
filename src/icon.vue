@@ -7,6 +7,7 @@
 <script lang="ts">
   import './svg'
   export default {
+    name:'FreeIcon',
     props:['name']
   }
 </script>
