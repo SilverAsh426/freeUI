@@ -27,6 +27,9 @@ Vue.component('g-sider', Sider)
 Vue.component('g-toast', Toast)
 Vue.use(plugin)
 
+import createElement from 'vue'
+const h = createElement
+
 new Vue({
   el:"#app",
   data:{
@@ -36,10 +39,21 @@ new Vue({
     message: '哈'
   },
   created() {
+    this.$toast('你需要充钱！', {
+      position: 'middle',
+      enableHtml: true,
+      closeButton: {
+        text: '已充钱',
+        callback (){
+          console.log('他说他充钱了')
+        }
+      },
+      autoClose: false,
+      autoCloseDelay: 3
+    })
   },
   methods:{
     showToast(){
-      this.$toast('message')
     }
   }
 })
