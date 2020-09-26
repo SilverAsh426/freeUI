@@ -4,9 +4,13 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
-  name:'FreeTabsBody'
+  name:'FreeTabsBody',
+  inject:['eventBus'],
+  created(){
+
+  }
 }
 </script>
 

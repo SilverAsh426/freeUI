@@ -37,18 +37,21 @@ Vue.component('g-tabs-body', TabsBody)
 Vue.component('g-tabs-item', TabsItem)
 Vue.component('g-tabs-pane', TabsPane)
 
-new Vue({
-  el:"#app",
-  data:{
-    loading1:false,
-    loading2:true,
-    loading3:false,
-    message: '哈'
-  },
-  created() {
+import createElement from 'vue'
+const h = createElement
 
+new Vue({
+  el: '#app',
+  data: {
+    selectedTab: 'os'
   },
-  methods:{
+  created(){
+  },
+  methods: {
+    yyy(data){
+      console.log('yyy')
+      console.log(data)
+    },
     showToast1(){
       this.showToast('top')
     },
@@ -59,17 +62,16 @@ new Vue({
       this.showToast('bottom')
     },
     showToast(position){
-      this.$toast(`你的余额为 ${parseInt(Math.random()*100)}。你需要充钱！`, {
+      this.$toast(`你的余额为 ${parseInt(Math.random() * 100)}。你需要充钱！`, {
         position,
-        enableHtml: true,
+        enableHtml: false,
         closeButton: {
           text: '已充钱',
-          callback (){
-            console.log('他说他充钱了')
+          callback () {
+            console.log('他说已经充钱了')
           }
         },
-        autoClose: false,
-        autoCloseDelay: 3
+        autoClose: 3,
       })
     }
   }
