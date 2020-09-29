@@ -49,7 +49,7 @@ const h = createElement
 new Vue({
   el: '#app',
   data: {
-    selectedTab: 'os'
+    selectedTab: ['2', '1']
   },
   created(){
   },
