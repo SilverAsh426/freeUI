@@ -1,9 +1,9 @@
-import Row from '../src/row'
+import Row from '../src/grid/row'
 
 const expect = chai.expect;
 import Vue from 'vue'
 import Popover from '../src/popover'
-import Col from '../src/col'
+import Col from '../src/grid/col'
 
 Vue.config.productionTip = false
 Vue.config.devtools = false

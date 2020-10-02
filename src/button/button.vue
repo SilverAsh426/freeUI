@@ -10,7 +10,7 @@
 </template>
 
 <script lang="ts">
-import Icon from './icon'
+import Icon from '../icon.vue'
 export default {
   name: 'FreeButton',
   components:{
@@ -25,7 +25,10 @@ export default {
     },
     iconPosition: {
       type: String,
-      default: 'left'
+      default: 'left',
+      validator(value){
+        return value === 'left' || value === 'right'
+      }
     }
   }
 };
@@ -37,23 +40,31 @@ export default {
   100%{ transform: rotate(360deg)}
 }
 .g-button {
-  font-size: var(--font-size);
-  height: var(--button-height);
+  $font-size: 14px;
+  $button-height: 32px;
+  $button-bg: white;
+  $button-active-bg: #eee;
+  $border-radius: 4px;
+  $color: #333;
+  $border-color: #999;
+  $border-color-hover: #666;
+  font-size: $font-size;
+  height: $button-height;
   padding: 0 1em;
-  border-radius: var(--border-redius);
-  border: 1px solid var(--border-color);
-  background: var(--button-bg);
+  border-radius: $border-radius;
+  border: 1px solid $border-color;
+  background: $button-bg;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   vertical-align: middle;
 
   &:hover {
-    border-color: var(--border-color-hover);
+    border-color: $border-color;
   }
 
   &:active {
-    background-color: var(--button-active-bg);
+    background-color: $button-active-bg;
   }
 
   &:focus {

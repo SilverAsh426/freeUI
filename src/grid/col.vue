@@ -15,7 +15,7 @@ let validator = (value) => {
   return valid
 }
 export default {
-  name: 'GuluCol',
+  name: 'FreeCol',
   props: {
     span: {
       type: [Number, String]
@@ -91,7 +91,7 @@ export default {
       }
     }
   }
-  @media (min-width: 769px){ // 770
+  @media (min-width: 769px){
     $class-prefix: col-narrow-pc-;
     @for $n from 1 through 24 {
       &.#{$class-prefix}#{$n} {
